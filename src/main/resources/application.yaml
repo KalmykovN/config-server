@@ -13,9 +13,20 @@ spring:
     config:
       server:
         git:
-          uri: file:///home/nikolay/Projects/EasyFleet/config-server-git
+          uri: https://gitlab.com/fleetty/spring-config-repository.git
+          default-label: master
+          username: develop.kalmykov@gmail.com
+          password: acer007Gitlub
+          cloneOnStart: true
+
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: file:///home/nikolay/Projects/EasyFleet/config-server-git
+#          default-label: master
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"
